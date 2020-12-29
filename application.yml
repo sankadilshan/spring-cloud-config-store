@@ -1,13 +1,15 @@
 server:
   port: 8080
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/sankadilshan/spring-cloud-config
-          search-paths:
-           - '*service'
+  datasource:
+    url: jdbc:mysql://localhost:3306/rentCarApplication?createIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandaardImpl
 
 
 
